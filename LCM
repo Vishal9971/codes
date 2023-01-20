@@ -1,0 +1,19 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        Scanner scn = new Scanner(System.in);
+        int N1= scn.nextInt();
+        int N2= scn.nextInt();
+
+        int Dividend=N1;
+        int Divisor=N2;
+        int lcm=0;
+        while(Divisor!=0){
+            int rem = Dividend%Divisor;
+            Dividend=Divisor;
+            Divisor=rem;
+        }
+        lcm=(N1*N2)/Dividend;
+        System.out.println(lcm);
+    }
+}
