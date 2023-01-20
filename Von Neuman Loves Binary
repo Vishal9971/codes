@@ -1,0 +1,20 @@
+public static void main(String[] args) {
+		Scanner scn = new Scanner (System.in);
+		int t = scn.nextInt();
+		while(t>0) {
+			t--;
+			int n = scn.nextInt();
+			int value=0;
+			int p =0;
+			int sum=0;
+			while(n>0) {
+				int rem = n%10;
+				n=n/10;
+				value=rem*(int)Math.pow(2, p);
+				p++;
+				sum+=value;
+			}
+			System.out.println(sum);
+		}
+		
+	}
