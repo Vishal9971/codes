@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int evenSum=0;
+        int oddSum=0;
+        int count=0;
+        while(n>0){
+            int rem = n%10;
+            n=n/10;
+            count++;
+            if(count%2==0){
+                evenSum+=rem;
+            }
+            else{
+                oddSum+=rem;
+            }
+        }
+        System.out.println(oddSum);
+        System.out.println(evenSum);
+    }
+}
